@@ -6,6 +6,7 @@ import successPopup from "../components/SuccessPopup";
 import SuccessPopup from "../components/SuccessPopup";
 import ErrorPopup from "../components/ErrorPopup";
 import { useNavigate } from "react-router-dom";
+import BASEURL from "../../utils/helper";
 export default function SendMoney() {
   const [amount, setAmount] = useState(1);
   const [errorMessage, setErrorMessage] = useState("");
@@ -51,7 +52,7 @@ export default function SendMoney() {
                     try {
                       await axios
                         .post(
-                          "http://localhost:3000/api/v1/account/transfer",
+                          BASEURL + "/account/transfer",
                           {
                             to: username,
                             amount: Number(amount),

@@ -3,12 +3,12 @@ import SubHeading from "../components/SubHeading";
 import InputBox from "../components/InputBox";
 import ButtonComponent from "../components/ButtonComponent";
 import BottomWarning from "../components/BottomWarning";
-import BASEURL from "...";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import ErrorPopup from "../components/ErrorPopup";
+import BASEURL from "../../utils/helper";
 export function SignUp() {
   const navigate = useNavigate();
   const [firstname, setFirstName] = useState("");

@@ -8,6 +8,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ErrorPopup from "../components/ErrorPopup";
+import BASEURL from "../../utils/helper";
 export function SignIn() {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
@@ -40,13 +41,10 @@ export function SignIn() {
             <ButtonComponent
               onClick={async () => {
                 try {
-                  const response = await axios.post(
-                    "http://localhost:3000/api/v1/user/signin",
-                    {
-                      username,
-                      password,
-                    }
-                  );
+                  const response = await axios.post(BASEURL + "/user/signin", {
+                    username,
+                    password,
+                  });
                   localStorage.setItem("token", response.data.token);
                   navigate("/dashboard");
                 } catch (error) {
