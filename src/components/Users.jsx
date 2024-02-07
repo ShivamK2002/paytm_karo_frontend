@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ButtonComponent from "./ButtonComponent";
-import BASEURL from "../../utils/helper";
 
 export const Users = () => {
   // Replace with backend call

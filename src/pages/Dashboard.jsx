@@ -4,7 +4,6 @@ import Appbar from "../components/Appbar";
 import { Balance } from "../components/Balance";
 import { Users } from "../components/Users";
 import Navbar from "../components/Navbar";
-import BASEURL from "../../utils/helper";
 // const BASEURL = process.env.BASEURL;
 export function Dashboard() {
   const [val, setVal] = useState(0);
