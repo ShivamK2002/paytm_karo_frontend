@@ -7,7 +7,7 @@ export default function Navbar({ toggleDarkMode, toggleDarkTheme }) {
   return (
     <>
       <div>
-        <div className="border shadow-md p-5 flex list-none justify-end space-x-11 font-semibold">
+        <div className="pl-5 max-width:full sm:border shadow-md sm:p-5 flex list-none sm:justify-end space-x-5 sm:space-x-11 font-semibold">
           <li
             onClick={() => {
               navigate("/");
