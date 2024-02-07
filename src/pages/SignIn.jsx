@@ -8,7 +8,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ErrorPopup from "../components/ErrorPopup";
-// import BASEURL from "../../utils/helper";
+const BASEURL = import.meta.env.VITE_BASEURL;
 export function SignIn() {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");

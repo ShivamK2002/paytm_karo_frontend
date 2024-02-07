@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ButtonComponent from "./ButtonComponent";
+const BASEURL = import.meta.env.VITE_BASEURL;
 
 export const Users = () => {
   // Replace with backend call

@@ -6,7 +6,7 @@ import successPopup from "../components/SuccessPopup";
 import SuccessPopup from "../components/SuccessPopup";
 import ErrorPopup from "../components/ErrorPopup";
 import { useNavigate } from "react-router-dom";
-// import BASEURL from "../../utils/helper";
+const BASEURL = import.meta.env.VITE_BASEURL;
 export default function SendMoney() {
   const [amount, setAmount] = useState(1);
   const [errorMessage, setErrorMessage] = useState("");

@@ -4,7 +4,7 @@ import Appbar from "../components/Appbar";
 import { Balance } from "../components/Balance";
 import { Users } from "../components/Users";
 import Navbar from "../components/Navbar";
-// const BASEURL = process.env.BASEURL;
+const BASEURL = import.meta.env.VITE_BASEURL;
 export function Dashboard() {
   const [val, setVal] = useState(0);
   useEffect(() => {
