@@ -50,29 +50,28 @@ export default function SendMoney() {
                 <button
                   onClick={async () => {
                     try {
-                      await axios
-                        .post(
-                          BASEURL + "/account/transfer",
-                          {
-                            to: username,
-                            amount: Number(amount),
+                      await axios.post(
+                        BASEURL + "/account/transfer",
+                        {
+                          to: username,
+                          amount: Number(amount),
+                        },
+                        {
+                          headers: {
+                            authorization:
+                              "Bearer " + localStorage.getItem("token"),
                           },
-                          {
-                            headers: {
-                              authorization:
-                                "Bearer " + localStorage.getItem("token"),
-                            },
-                          }
-                        )
-                        .then(setSuccess(true))
-                        .then(setTimeout(() => navigate("/dashboard"), 2000));
+                        }
+                      );
+                      setSuccess(true);
+                      setTimeout(() => navigate("/dashboard"), 2000);
                     } catch (error) {
                       if (error.response.data.message) {
                         setErrorMessage(error.response.data.message);
                       } else setErrorMessage("It's not you but us...");
                     } finally {
                       setTimeout(() => {
-                        setAmount(1);
+                        setAmount(0);
                         setErrorMessage("");
                       }, 3000);
                     }

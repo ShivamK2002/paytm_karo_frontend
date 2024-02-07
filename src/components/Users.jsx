@@ -12,7 +12,7 @@ export const Users = () => {
 
   useEffect(() => {
     axios
-      .get(BASEURL + "/bulk?filter=" + filter, {
+      .get(BASEURL + "/user/bulk?filter=" + filter, {
         headers: { Authorization: "Bearer " + localStorage.getItem("token") },
       })
       .then((response) => {
