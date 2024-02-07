@@ -6,7 +6,9 @@ import successPopup from "../components/SuccessPopup";
 import SuccessPopup from "../components/SuccessPopup";
 import ErrorPopup from "../components/ErrorPopup";
 import { useNavigate } from "react-router-dom";
-const BASEURL = import.meta.env.VITE_BASEURL;
+// const BASEURL = import.meta.env.VITE_BASEURL;
+const BASEURL = "https://paytm-karo-backend-ekpd.onrender.com/api/v1";
+
 export default function SendMoney() {
   const [amount, setAmount] = useState(1);
   const [errorMessage, setErrorMessage] = useState("");
