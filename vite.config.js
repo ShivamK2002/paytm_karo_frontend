@@ -10,6 +10,8 @@ dotenv.config();
 export default defineConfig({
   plugins: [react()],
   define: {
-    "process.env.VITE_BASEURL": JSON.stringify(process.env.VITE_BASEURL),
+    "import.meta.env.VITE_BASEURL": JSON.stringify(
+      import.meta.env.VITE_BASEURL
+    ),
   },
 });

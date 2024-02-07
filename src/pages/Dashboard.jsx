@@ -4,8 +4,8 @@ import Appbar from "../components/Appbar";
 import { Balance } from "../components/Balance";
 import { Users } from "../components/Users";
 import Navbar from "../components/Navbar";
-// const BASEURL = import.meta.env.VITE_BASEURL;
-const BASEURL = "https://paytm-karo-backend-ekpd.onrender.com/api/v1";
+const BASEURL = import.meta.env.VITE_BASEURL;
+// const BASEURL = "https://paytm-karo-backend-ekpd.onrender.com/api/v1";
 
 export function Dashboard() {
   const [val, setVal] = useState(0);
