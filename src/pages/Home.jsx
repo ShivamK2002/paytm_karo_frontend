@@ -5,7 +5,10 @@ export default function Home() {
     <>
       <div>
         <div className="w-24 p-5 md:pl-32 md:w-52">
-          <img src="../img/paytm_upi.avif" alt="" />
+          <img
+            src="https://assetscdn1.paytm.com/images/catalog/view/310944/1697527183231.png"
+            alt=""
+          />
         </div>
         <div className=" p-5 space-y-10 md:flex md:pt-16 md:pl-32 md:pr-32 md:justify-between md:space-x-10">
           <div className=" ">
@@ -21,7 +24,10 @@ export default function Home() {
           </div>
 
           <div className="md:max-w-[500px]">
-            <img src="../img/paytm_home.avif" alt="" />
+            <img
+              src="https://assetscdn1.paytm.com/images/catalog/view_item/850762/1706796536129.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
