@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { SignUp } from "./pages/SignUp";
 import { SignIn } from "./pages/SignIn";
 import SendMoney from "./pages/SendMoney";
@@ -33,7 +33,7 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <BrowserRouter>
+        <HashRouter>
           <Navbar
             toggleDarkMode={toggleDarkMode}
             toggleDarkTheme={toggleDarkTheme}
@@ -48,7 +48,7 @@ function App() {
             <Route path="/send" element={<SendMoney />}></Route>
             <Route path="/dashboard" element={<Dashboard />}></Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
     </>
   );
